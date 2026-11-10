@@ -1,64 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-
-
 <head>
-    <title>Memora</title> <!-- the content here will only show in the tab and in the metadata about the page -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <link href="reset.css" rel="stylesheet" type="text/css" />
-    <link href="styles.css" rel="stylesheet" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f7f5f0">
+    <title>Memora | Your memory companion</title>
+    <link href="styles.css" rel="stylesheet">
 </head>
-
-
 <body>
-	<!--- NAVBAR (to-do later) --->
-
-
-    <!--- HEADINGS--->
-     <header class="header-container">
-        <img src="your-image.jpg" alt="Header Image" class="header-item" /> <!-- if you want to add an image, use this tag and link to the actual image location in your project with the src attribute -->
-        <h1 class="header-item">Memora</h1> <!-- First Text -->
-        <h3 class="header-item">Short description about topic</h3> <!-- Second Text -->
-        <button class="header-item" type="button">oooh this is a button</button> <!-- First Button -->
-        <button class="header-item" type="button">another button!</button> <!-- Second Button -->
+    <header class="site-header">
+        <div class="header-inner">
+            <h1 class="brand">Memora</h1>
+        </div>
     </header>
 
+    <main class="dashboard">
+        <section class="welcome-row" aria-labelledby="welcome-title">
+            <div class="welcome-copy">
+                <h2 id="welcome-title">Welcome Katie!</h2>
+                <p>How are you feeling?</p>
+            </div>
 
-    <!--- ABOUT --->
-    <h2>Memora supports patients suffering from memory loss related diseases, 
-        specifically relating to dementia. It combines storing and preserving 
-        memories, tracking emotional well-being, and organization by managing calendars 
-        and reminders. Built to support memory, independence, and help caregivers understand 
-        any changes over time.
-    </h2>
+            <section class="calendar-card" aria-label="Today's reminders">
+                <img class="calendar-icon" src="assets/calendar-check.svg" alt="">
+                <ul class="reminders">
+                    <li>Medication at 10 AM</li>
+                    <li>Doctor's appointment at 2 PM</li>
+                </ul>
+                <button class="action-button calendar-button" type="button">View my calendar <span aria-hidden="true">→</span></button>
+            </section>
+        </section>
 
-
-    <!--- DATA --->
-    <h3>Data about my topic</h3>
-    <img src="" />
-    <h4>Add some charts + captions that illustrate my topic and some interesting facts</h4>
-
-
-    <ul>
-        <li> less than 15%</li>
-        <li> 15%-25%</li>
-        <li> 25%-35%</li>
-        <li> 35%-45%</li>
-        <li> >45%</li>
-    </ul>
-
-
-    <!--- Additional Resources --->
-    <h2>Additional Resources!</h2>
-
-
-    <h3>Where can you learn more about this topic?</h3>
-    <a href="https://www.example.com/"> Visit this website!</a>
-    <p></p>
-
-
+        <section class="activities" aria-labelledby="activities-title">
+            <h2 id="activities-title">What would you like to do today?</h2>
+            <div class="activity-grid">
+                <article class="activity-card activity-card-gold">
+                    <img class="activity-art" src="assets/memory-card-texture.png" alt="">
+                    <h3>Memory game</h3>
+                    <p>Revisit your favorite memories</p>
+                    <button class="action-button" type="button">Get Started <span aria-hidden="true">→</span></button>
+                </article>
+                <article class="activity-card activity-card-green">
+                    <img class="activity-art" src="assets/memory-card-texture.png" alt="">
+                    <h3>Memory game</h3>
+                    <p>Revisit your favorite memories</p>
+                    <button class="action-button" type="button">Get Started <span aria-hidden="true">→</span></button>
+                </article>
+            </div>
+        </section>
+    </main>
 </body>
-
-
 </html>
