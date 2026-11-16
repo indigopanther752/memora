@@ -49,13 +49,15 @@
             </div>
         </section>
     </main>
-<script src="https://jsdelivr.net"></script>
-  <script>
-    const SUPABASE_URL = 'https://wmdtjluxbobbpriiuctv.supabase.co';
-    const SUPABASE_ANON_KEY = 'sb_publishable_bO577SIYEYbfl5FRXAfLvA_e2Bvu7wd';
-    const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+    <script type="module">
+  import { createClient } from 'https://esm.sh/@supabase/supabase-js@2';
 
-    console.log('Supabase connected!');
-  </script>
+  const SUPABASE_URL = 'https://wmdtjluxbobbpriiuctv.supabase.co';
+  const SUPABASE_PUBLISHABLE_KEY = 'sb_publishable_bO577SIYEYbfl5FRXAfLvA_e2Bvu7wd';
+
+  window.supabaseClient = createClient(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY);
+
+  console.log('Supabase connected!');
+</script>
 </body>
 </html>
