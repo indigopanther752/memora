@@ -49,15 +49,14 @@
             </div>
         </section>
     </main>
-    <script type="module">
-  import { createClient } from 'https://esm.sh/@supabase/supabase-js@2';
+    <script src="supabase.js"></script>
+  <script>
+    const SUPABASE_URL = 'https://wmdtjluxbobbpriiuctv.supabase.co';
+    const SUPABASE_PUBLISHABLE_KEY = 'sb_publishable_bO577SIYEYbfl5FRXAfLvA_e2Bvu7wd';
 
-  const SUPABASE_URL = 'https://wmdtjluxbobbpriiuctv.supabase.co';
-  const SUPABASE_PUBLISHABLE_KEY = 'sb_publishable_bO577SIYEYbfl5FRXAfLvA_e2Bvu7wd';
-
-  window.supabaseClient = createClient(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY);
-
-  console.log('Supabase connected!');
-</script>
+    window.supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY);
+    console.log('Supabase connected!');
+  </script>
+  <script src="script.js"></script>
 </body>
 </html>
