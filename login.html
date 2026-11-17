@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Log In</title>
+  <style>
+    body { font-family: sans-serif; max-width: 360px; margin: 80px auto; padding: 0 20px; }
+    input, button { display: block; width: 100%; margin: 10px 0; padding: 10px; box-sizing: border-box; }
+    #message { margin-top: 12px; font-weight: bold; }
+  </style>
+</head>
+<body>
+    <h2>Log In or Sign Up</h2>
+  <form id="auth-form">
+    <input type="email" id="email" placeholder="Email" required />
+    <input type="password" id="password" placeholder="Password (min 6 characters)" required />
+    <button type="submit">Log In</button>
+    <button type="button" id="signup-btn">Sign Up</button>
+  </form>
+  <p id="message"></p>
+
+   <script src="supabase.js"></script>
+  <script>
+    const SUPABASE_URL = 'https://wmdtjluxbobbpriiuctv.supabase.co';
+    const SUPABASE_PUBLISHABLE_KEY = 'sb_publishable_bO577SIYEYbfl5FRXAfLvA_e2Bvu7wd';
+
+    window.supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY);
+    console.log('Supabase connected!');
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
