@@ -1,54 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#f7f5f0">
-    <title>Memora | Your memory companion</title>
-    <link href="styles.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Memora</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://googleapis.com" rel="stylesheet" />
 </head>
-<body>
-    <header class="site-header">
-        <div class="header-inner">
-            <h1 class="brand">Memora</h1>
-        </div>
-    </header>
+<body style="margin: 0; background: #F7F5F0;">
 
-    <main class="dashboard">
-        <section class="welcome-row" aria-labelledby="welcome-title">
-            <div class="welcome-copy">
-                <h2 id="welcome-title">Welcome Katie!</h2>
-                <p>How are you feeling?</p>
-            </div>
+  <div style="width: 1268px; height: 2020px; position: relative; background: #F7F5F0; overflow: hidden; margin: 0 auto;">
+    
+    <!-- Green Top Header Bar -->
+    <div style="width: 1333px; height: 95px; left: -26px; top: 41px; position: absolute; background: #609181; border-radius: 20px"></div>
 
-            <section class="calendar-card" aria-label="Today's reminders">
-                <img class="calendar-icon" src="assets/calendar-check.svg" alt="">
-                <ul class="reminders">
-                    <li>Medication at 10 AM</li>
-                    <li>Doctor's appointment at 2 PM</li>
-                </ul>
-                <button class="action-button calendar-button" type="button">View my calendar <span aria-hidden="true">→</span></button>
-            </section>
-        </section>
+    <!-- Brand Name -->
+    <div style="width: 204px; height: 46px; left: 145px; top: 67px; position: absolute; color: #F7F5F0; font-size: 40px; font-family: 'Abhaya Libre', serif; font-weight: 800; word-wrap: break-word">Memora</div>
+    
+    <!-- Log Out Button (Top Right) -->
+    <button id="logout-btn" style="left: 1090px; top: 66px; position: absolute; background: #F7F5F0; color: #26302B; border: none; border-radius: 100px; padding: 10px 24px; font-size: 18px; font-family: 'Inter', sans-serif; font-weight: 600; cursor: pointer;">Log Out</button>
 
-        <section class="activities" aria-labelledby="activities-title">
-            <h2 id="activities-title">What would you like to do today?</h2>
-            <div class="activity-grid">
-                <article class="activity-card activity-card-gold">
-                    <img class="activity-art" src="assets/memory-card-texture.png" alt="">
-                    <h3>Memory game</h3>
-                    <p>Revisit your favorite memories</p>
-                    <button class="action-button" type="button">Get Started <span aria-hidden="true">→</span></button>
-                </article>
-                <article class="activity-card activity-card-green">
-                    <img class="activity-art" src="assets/memory-card-texture.png" alt="">
-                    <h3>Memory game</h3>
-                    <p>Revisit your favorite memories</p>
-                    <button class="action-button" type="button">Get Started <span aria-hidden="true">→</span></button>
-                </article>
-            </div>
-        </section>
-    </main>
+    <!-- Welcome Heading -->
+    <div style="width: 436px; height: 65px; left: 53px; top: 189px; position: absolute; color: #26302B; font-size: 60px; font-family: 'Abhaya Libre', serif; font-weight: 800; word-wrap: break-word">Welcome!</div>
+    <div style="width: 459px; height: 45px; left: 53px; top: 645px; position: absolute; color: #26302B; font-size: 30px; font-family: 'Inter', sans-serif; font-weight: 500; word-wrap: break-word">What would you like to do today?</div>
+
+    <!-- Card 1 (Top Left) -->
+    <div style="width: 564px; height: 430px; left: 51px; top: 697px; position: absolute">
+      <div style="width: 564px; height: 430px; left: 0px; top: 0px; position: absolute; background-color: rgba(197.40, 158.68, 96.39, 0.60); border-radius: 20px"></div>
+      <div style="width: 189px; height: 34px; left: 30px; top: 280px; position: absolute; color: black; font-size: 27px; font-family: 'Inter', sans-serif; font-weight: 700; word-wrap: break-word">Memory game</div>
+      <div style="width: 395px; height: 25px; left: 30px; top: 318px; position: absolute; color: #26302B; font-size: 18px; font-family: 'Inter', sans-serif; font-weight: 400; word-wrap: break-word">Revisit your favorite memories</div>
+      <img style="width: 512px; height: 235px; left: 26px; top: 27px; position: absolute; border-radius: 12px;" src="assets/memory-card-texture.png" />
+      <div style="width: 508px; height: 53px; left: 30px; top: 355px; position: absolute; background: #C59F60; box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.25); border-radius: 100px; border: 1px rgba(197.40, 158.68, 96.39, 0.60) solid"></div>
+      <div style="left: 206px; top: 366px; position: absolute; text-align: center; justify-content: center; display: flex; flex-direction: column; color: #1A1A1A; font-size: 25px; font-family: 'Inter', sans-serif; font-weight: 500; word-wrap: break-word">Get Started →</div>
+    </div>
+
+    <!-- Card 2 (Top Right) -->
+    <div style="width: 564px; height: 430px; left: 652px; top: 697px; position: absolute">
+      <div style="width: 564px; height: 430px; left: 0px; top: 0px; position: absolute; background: rgba(96, 145, 129, 0.61); border-radius: 20px"></div>
+      <div style="width: 189px; height: 34px; left: 30px; top: 280px; position: absolute; color: black; font-size: 27px; font-family: 'Inter', sans-serif; font-weight: 700; word-wrap: break-word">Memory game</div>
+      <div style="width: 395px; height: 25px; left: 30px; top: 318px; position: absolute; color: #26302B; font-size: 18px; font-family: 'Inter', sans-serif; font-weight: 400; word-wrap: break-word">Revisit your favorite memories</div>
+      <img style="width: 512px; height: 235px; left: 26px; top: 27px; position: absolute; border-radius: 12px;" src="assets/memory-card-texture.png" />
+      <div style="width: 508px; height: 53px; left: 30px; top: 355px; position: absolute; background: #5E907F; box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.25); border-radius: 100px; border: 1px rgba(96, 145, 129, 0.61) solid"></div>
+      <div style="left: 206px; top: 366px; position: absolute; text-align: center; justify-content: center; display: flex; flex-direction: column; color: #1A1A1A; font-size: 25px; font-family: 'Inter', sans-serif; font-weight: 500; word-wrap: break-word">Get Started →</div>
+    </div>
+
+     <!-- Card 3 (Bottom Left) -->
+    <div style="width: 564px; height: 430px; left: 51px; top: 1166px; position: absolute">
+      <div style="width: 564px; height: 430px; left: 0px; top: 0px; position: absolute; background: rgba(197.40, 158.68, 96.39, 0.60); border-radius: 20px"></div>
+      <div style="width: 189px; height: 34px; left: 30px; top: 280px; position: absolute; color: black; font-size: 27px; font-family: 'Inter', sans-serif; font-weight: 700; word-wrap: break-word">Memory game</div>
+      <div style="width: 395px; height: 25px; left: 30px; top: 318px; position: absolute; color: #26302B; font-size: 18px; font-family: 'Inter', sans-serif; font-weight: 400; word-wrap: break-word">Revisit your favorite memories</div>
+      <img style="width: 512px; height: 235px; left: 26px; top: 27px; position: absolute; border-radius: 12px;" src="assets/memory-card-texture.png" />
+      <div style="width: 508px; height: 53px; left: 30px; top: 355px; position: absolute; background: #C59F60; box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.25); border-radius: 100px; border: 1px rgba(197.40, 158.68, 96.39, 0.60) solid"></div>
+      <div style="left: 206px; top: 366px; position: absolute; text-align: center; justify-content: center; display: flex; flex-direction: column; color: #1A1A1A; font-size: 25px; font-family: 'Inter', sans-serif; font-weight: 500; word-wrap: break-word">Get Started →</div>
+    </div>
+
+    <!-- Card 4 (Bottom Right) -->
+    <div style="width: 564px; height: 430px; left: 652px; top: 1166px; position: absolute">
+      <div style="width: 564px; height: 430px; left: 0px; top: 0px; position: absolute; background: rgba(96, 145, 129, 0.61); border-radius: 20px"></div>
+      <div style="width: 189px; height: 34px; left: 30px; top: 280px; position: absolute; color: black; font-size: 27px; font-family: 'Inter', sans-serif; font-weight: 700; word-wrap: break-word">Memory game</div>
+      <div style="width: 395px; height: 25px; left: 30px; top: 318px; position: absolute; color: #26302B; font-size: 18px; font-family: 'Inter', sans-serif; font-weight: 400; word-wrap: break-word">Revisit your favorite memories</div>
+      <img style="width: 512px; height: 235px; left: 26px; top: 27px; position: absolute; border-radius: 12px;" src="assets/memory-card-texture.png" />
+      <div style="width: 508px; height: 53px; left: 30px; top: 355px; position: absolute; background: #5E907F; box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.25); border-radius: 100px; border: 1px rgba(96, 145, 129, 0.61) solid"></div>
+      <div style="left: 206px; top: 366px; position: absolute; text-align: center; justify-content: center; display: flex; flex-direction: column; color: #1A1A1A; font-size: 25px; font-family: 'Inter', sans-serif; font-weight: 500; word-wrap: break-word">Get Started →</div>
+    </div>
+
+    <!-- Calendar Reminder Card -->
+    <div style="width: 654px; height: 301px; left: 62px; top: 1651px; position: absolute; background: rgba(89.42, 169.84, 174.07, 0.54); border-radius: 20px"></div>
+    
+    <!-- Calendar Icon (Update src="calendar.svg" if your file has a different name) -->
+    <img src="assets/calendar-check.svg" alt="Calendar" style="height: 36px; width: auto; left: 97px; top: 1680px; position: absolute;" />
+    
+    <!-- Reminder Heading Beside the Calendar Icon -->
+    <div style="left: 145px; top: 1684px; position: absolute; color: #26302B; font-size: 24px; font-family: 'Inter', sans-serif; font-weight: 700;">You have two reminders today</div>
+    
+    <div style="width: 395px; height: 25px; left: 97px; top: 1742px; position: absolute; color: #26302B; font-size: 18px; font-family: 'Inter', sans-serif; font-weight: 400; word-wrap: break-word">Medication at 10 AM</div>
+    <div style="width: 395px; height: 25px; left: 97px; top: 1777px; position: absolute; color: #26302B; font-size: 18px; font-family: 'Inter', sans-serif; font-weight: 400; word-wrap: break-word">Doctor's appointment at 2 PM</div>
+    <div style="width: 582px; height: 53px; left: 97px; top: 1870px; position: absolute; background: #C59F60; box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.25); border-radius: 100px; border: 1px rgba(197.40, 158.68, 96.39, 0.60) solid"></div>
+    <div style="left: 254px; top: 1882px; position: absolute; text-align: center; justify-content: center; display: flex; flex-direction: column; color: #1A1A1A; font-size: 25px; font-family: 'Inter', sans-serif; font-weight: 500; word-wrap: break-word">View my calendar →</div>
+
+    <!-- Daily Check-In Card -->
+    <div style="width: 600px; height: 400px; left: 636px; top: 170px; position: absolute; background: white; overflow: hidden; border-radius: 24px; outline: 1px #DFE5DE solid; outline-offset: -1px">
+      <div style="width: 544px; height: 100px; left: 28px; top: 26px; position: absolute; overflow: hidden">
+        <div style="left: 0px; top: 0px; position: absolute; color: #44695C; font-size: 12px; font-family: 'Inter', sans-serif; font-weight: 500; word-wrap: break-word">DAILY CHECK-IN</div>
+        <div style="width: 544px; left: 0px; top: 23px; position: absolute; color: #26302B; font-size: 32px; font-family: 'Abhaya Libre', serif; font-weight: 800; word-wrap: break-word">How are you feeling?</div>
+        <div style="width: 544px; left: 0px; top: 66px; position: absolute; color: #59675F; font-size: 15px; font-family: 'Inter', sans-serif; font-weight: 400; word-wrap: break-word">Select a mood to check in for today</div>
+      </div>
+    
+    <div style="left: 28px; top: 155px; position: absolute; display: flex; gap: 16px; align-items: center;">
+        <button type="button" class="mood-btn" data-mood="awful" style="background: none; border: none; cursor: pointer; padding: 0;">
+            <img src="assets/mood-awful.svg" alt="awful" />
+        </button>
+        <button type="button" class="mood-btn" data-mood="good" style="background: none; border: none; cursor: pointer; padding: 0;">
+            <img src="assets/mood-good.svg" alt="good" />
+        </button>
+        <button type="button" class="mood-btn" data-mood="great" style="background: none; border: none; cursor: pointer; padding: 0;">
+            <img src="assets/mood-great.svg" alt="great" />
+        </button>
+        <button type="button" class="mood-btn" data-mood="low" style="background: none; border: none; cursor: pointer; padding: 0;">
+            <img src="assets/mood-low.svg" alt="low" />
+        </button>
+        <button type="button" class="mood-btn" data-mood="okay" style="background: none; border: none; cursor: pointer; padding: 0;">
+            <img src="assets/mood-okay.svg" alt="okay" />
+        </button>
+    </div>
+  
     <script src="supabase.js"></script>
   <script>
     const SUPABASE_URL = 'https://wmdtjluxbobbpriiuctv.supabase.co';
