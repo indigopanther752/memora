@@ -35,3 +35,16 @@ supabaseClient.auth.onAuthStateChange((event, session) => {
     window.location.href = 'login.html';
   }
 });
+
+const statusTitle = document.getElementById('mood-status-title');
+if (statusTitle) {
+  const today = new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric' });
+  statusTitle.textContent = `Choose a mood to update ${today}.`;
+
+  document.querySelectorAll('.mood-btn').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const chosenMood = btn.dataset.mood;
+      statusTitle.textContent = `Mood updated to "${chosenMood}" for ${today}!`;
+    });
+  });
+}
