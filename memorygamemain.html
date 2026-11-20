@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Memora — Your Memories</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://googleapis.com" rel="stylesheet" />
+</head>
+<body style="margin: 0; background: #F7F5F0; display: flex; justify-content: center;">
+
+  <div style="width: 1268px; min-height: 2020px; background: #F7F5F0; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex;">
+
+    <!-- Top Green Header Bar -->
+    <div style="align-self: stretch; padding-top: 40px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex;">
+      <div style="align-self: stretch; height: 96px; padding-left: 53px; padding-right: 53px; background: #609181; justify-content: space-between; align-items: center; display: flex;">
+        <div style="color: #F7F5F0; font-size: 40px; font-family: 'Abhaya Libre', serif; font-weight: 800; line-height: 48px;">Memora</div>
+        
+        <a href="index.html" style="text-decoration: none; width: 176px; min-height: 48px; padding: 0 20px; background: #F7F5F0; box-shadow: 0px 1px 2px -1px rgba(0, 0, 0, 0.10), 0px 1px 3px rgba(0, 0, 0, 0.10); border-radius: 9999px; justify-content: center; align-items: center; display: flex; color: #26302B; font-size: 20px; font-family: 'Inter', sans-serif; font-weight: 500; cursor: pointer;">
+          ← Home
+        </a>
+      </div>
+    </div>
+
+    <!-- Main Page Container -->
+    <div style="align-self: stretch; flex-direction: column; justify-content: flex-start; align-items: center; display: flex;">
+      <div style="width: 1216px; padding-bottom: 96px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex;">
+        
+        <!-- 1. Hero Section -->
+        <div style="align-self: stretch; padding-top: 64px; padding-bottom: 64px; justify-content: space-between; align-items: center; display: flex; gap: 40px;">
+          <div style="flex: 1; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex;">
+            <div style="color: #44695C; font-size: 14px; font-family: 'Inter', sans-serif; font-weight: 600; line-height: 20px; letter-spacing: 1.68px;">MEMORY JOGGING</div>
+            <div style="padding-top: 16px; color: #26302B; font-size: 72px; font-family: 'Abhaya Libre', serif; font-weight: 800; line-height: 72px;">Your Memories</div>
+            <div style="max-width: 600px; padding-top: 20px; color: #52635A; font-size: 24px; font-family: 'Inter', sans-serif; font-weight: 400; line-height: 39px;">Keep your favorite moments close. Add memories or revisit the moments that matter to you.</div>
+            
+            <a href="index.html" style="text-decoration: none; margin-top: 28px; height: 56px; padding: 0 28px; border-radius: 9999px; outline: 2px #44695C solid; outline-offset: -2px; justify-content: center; align-items: center; display: inline-flex; color: #355F50; font-size: 18px; font-family: 'Inter', sans-serif; font-weight: 600; cursor: pointer;">
+              ← Back to Home
+            </a>
+          </div>
+
+          <!-- Hero Photo (Framed photos on fabric) -->
+          <div style="width: 544px; height: 384px; box-shadow: 0px 4px 6px -4px rgba(0, 0, 0, 0.10), 0px 10px 15px -3px rgba(0, 0, 0, 0.10); overflow: hidden; border-radius: 32px; flex-shrink: 0;">
+            <img src="assets/memorygameframe.svg" alt="Framed family memories" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
+          </div>
+        </div>
+
+        <!-- 2. Two Action Cards Side by Side -->
+        <div style="align-self: stretch; display: flex; gap: 32px; align-items: stretch;">
+          
+          <!-- Left Card: Add My Memories -->
+          <div style="flex: 1; min-height: 496px; padding: 36px; background: #DFC69A; border-radius: 32px; flex-direction: column; justify-content: space-between; align-items: flex-start; display: flex; box-sizing: border-box;">
+            <div>
+
+                <!-- White Rounded Icon Box -->
+              <div style="width: 80px; height: 80px; background: rgba(255, 255, 255, 0.65); border-radius: 24px; justify-content: center; align-items: center; display: flex;">
+                <!-- Uncomment and match filename if you exported the icon inside this box: -->
+                <img src="assets/fileicon.svg" alt="" style="width: 44px; height: 44px;" -->
+              </div>
+              <div style="padding-top: 28px; color: #26302B; font-size: 48px; font-family: 'Abhaya Libre', serif; font-weight: 800; line-height: 48px;">Add My Memories</div>
+              <div style="padding-top: 16px; color: #493D2D; font-size: 20px; font-family: 'Inter', sans-serif; font-weight: 400; line-height: 32.5px;">Upload photos and videos from your device. Add a title, date, or short note to help tell the story.</div>
+            </div>
+
+            <button id="upload-memories-btn" type="button" style="width: 100%; height: 64px; margin-top: 24px; padding: 0 32px; background: #26302B; border: none; box-shadow: 0px 2px 4px -2px rgba(0, 0, 0, 0.10), 0px 4px 6px -1px rgba(0, 0, 0, 0.10); border-radius: 9999px; color: white; font-size: 20px; font-family: 'Inter', sans-serif; font-weight: 700; cursor: pointer;">
+              Upload Memories
+            </button>
+          </div>
+
+          <!-- Right Card: Play Memory Game -->
+          <div style="flex: 1; min-height: 496px; background: #A9C8BD; overflow: hidden; border-radius: 32px; flex-direction: column; justify-content: space-between; align-items: flex-start; display: flex;">
+            <img src="assets/memoryplay.svg" alt="Play Memory Game" style="width: 100%; height: 224px; object-fit: cover; display: block;" />
+            
+            <div style="align-self: stretch; padding: 36px; flex-direction: column; justify-content: space-between; align-items: flex-start; display: flex; flex: 1; box-sizing: border-box;">
+              <div>
+                <div style="color: #26302B; font-size: 48px; font-family: 'Abhaya Libre', serif; font-weight: 800; line-height: 48px;">Play Memory Game</div>
+                <div style="padding-top: 12px; color: #31463E; font-size: 20px; font-family: 'Inter', sans-serif; font-weight: 400; line-height: 32.5px;">Explore your saved memories through fun activities.</div>
+              </div>
+
+              <div style="width: 100%; margin-top: 24px; display: flex; flex-direction: column; align-items: center; gap: 10px;">
+                <button id="play-game-btn" type="button" style="width: 100%; height: 64px; padding: 0 32px; background: #44695C; border: none; box-shadow: 0px 2px 4px -2px rgba(0, 0, 0, 0.10), 0px 4px 6px -1px rgba(0, 0, 0, 0.10); border-radius: 9999px; color: white; font-size: 20px; font-family: 'Inter', sans-serif; font-weight: 700; cursor: pointer;">
+                  Play Now
+                </button>
+                <span style="color: #31463E; font-size: 14px; font-family: 'Inter', sans-serif; font-weight: 400;">Memory games are coming soon.</span>
+              </div>
+            </div>
+          </div>
+
+          </div>
+
+        <!-- 3. Dashed Upload Dropzone Box ("Choose memories to add") -->
+        <div style="align-self: stretch; margin-top: 48px; padding: 48px 36px; background: rgba(255, 255, 255, 0.45); border: 2px dashed #B5C4BC; border-radius: 32px; flex-direction: column; justify-content: center; align-items: center; display: flex; text-align: center; box-sizing: border-box;">
+          
+          <!-- Soft Green Circle With Your Upload Icon Inside -->
+          <div style="width: 80px; height: 80px; background: #DCE7E1; border-radius: 9999px; justify-content: center; align-items: center; display: flex; margin-bottom: 20px;">
+            <img src="assets/uploadicon.svg" alt="Upload icon" style="width: 36px; height: 36px;" />
+          </div>
+
+          <div style="color: #26302B; font-size: 32px; font-family: 'Abhaya Libre', serif; font-weight: 800; line-height: 38px;">Choose memories to add</div>
+          <div style="margin-top: 8px; color: #52635A; font-size: 18px; font-family: 'Inter', sans-serif; font-weight: 400; line-height: 28px;">Select photos or videos from your device. You can review everything before saving.</div>
+
+          <!-- Hidden File Inputs + Two Styled Pill Buttons -->
+          <input type="file" id="photo-input" accept="image/*" multiple style="display: none;" />
+          <input type="file" id="video-input" accept="video/*" multiple style="display: none;" />
+
+          <div style="margin-top: 28px; display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+            <button type="button" onclick="document.getElementById('photo-input').click()" style="height: 52px; padding: 0 32px; background: #44695C; border: none; border-radius: 9999px; color: white; font-size: 18px; font-family: 'Inter', sans-serif; font-weight: 600; cursor: pointer;">
+              Choose Photos
+            </button>
+            <button type="button" onclick="document.getElementById('video-input').click()" style="height: 52px; padding: 0 32px; background: white; border: 2px solid #44695C; border-radius: 9999px; color: #355F50; font-size: 18px; font-family: 'Inter', sans-serif; font-weight: 600; cursor: pointer;">
+              Choose Videos
+            </button>
+          </div>
+        </div>
+
+        <!-- 4. "My Saved Memories" Gallery Section -->
+        <div style="align-self: stretch; margin-top: 64px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex;">
+          <div style="color: #26302B; font-size: 44px; font-family: 'Abhaya Libre', serif; font-weight: 800; line-height: 48px;">My Saved Memories</div>
+          <div style="margin-top: 8px; color: #52635A; font-size: 18px; font-family: 'Inter', sans-serif; font-weight: 400; line-height: 28px;">Browse your photos and videos, or update their details.</div>
+
+          <div id="memories-gallery" style="align-self: stretch; margin-top: 28px; min-height: 160px; padding: 48px 32px; background: white; border: 1px solid #DFE5DE; border-radius: 24px; flex-direction: column; justify-content: center; align-items: center; display: flex; text-align: center; box-sizing: border-box;">
+            <div style="color: #26302B; font-size: 20px; font-family: 'Inter', sans-serif; font-weight: 700;">Your gallery is ready for its first memory.</div>
+            <div style="margin-top: 6px; color: #59675F; font-size: 16px; font-family: 'Inter', sans-serif; font-weight: 400;">Choose a photo or video above when you are ready.</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="supabase.js"></script>
+  <script>
+    const SUPABASE_URL = 'https://' + 'wmdtjluxbobbpriiuctv.supabase.co';
+    const SUPABASE_PUBLISHABLE_KEY = 'sb_publishable_bO577SIYEYbfl5FRXAfLvA_e2Bvu7wd';
+
+    window.supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY);
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>

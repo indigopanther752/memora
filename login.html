@@ -3,26 +3,111 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Log In</title>
-  <style>
-    body { font-family: sans-serif; max-width: 360px; margin: 80px auto; padding: 0 20px; }
-    input, button { display: block; width: 100%; margin: 10px 0; padding: 10px; box-sizing: border-box; }
-    #message { margin-top: 12px; font-weight: bold; }
-  </style>
+  <title>Memora — Log In</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://googleapis.com" rel="stylesheet" />
 </head>
-<body>
-    <h2>Log In or Sign Up</h2>
-  <form id="auth-form">
-    <input type="email" id="email" placeholder="Email" required />
-    <input type="password" id="password" placeholder="Password (min 6 characters)" required />
-    <button type="submit">Log In</button>
-    <button type="button" id="signup-btn">Sign Up</button>
-  </form>
-  <p id="message"></p>
+<body style="margin: 0; background: #F7F5F0; display: flex; justify-content: center;">
 
-   <script src="supabase.js"></script>
+  <div style="width: 1268px; min-height: 100vh; background: #F7F5F0; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex;">
+
+    <!-- Top Green Header Bar -->
+    <div style="align-self: stretch; padding-top: 40px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex;">
+      <div style="align-self: stretch; height: 96px; padding-left: 53px; padding-right: 53px; background: #609181; border-radius: 20px; justify-content: space-between; align-items: center; display: flex;">
+        <div style="justify-content: flex-start; align-items: center; gap: 12px; display: flex;">
+          <!-- Optional Logo Slot (Uncomment and update filename if you want your logo here) -->
+          <!-- <img src="assets/logo.svg" alt="Memora Logo" style="height: 60px; width: auto;" /> -->
+          <div style="color: #F7F5F0; font-size: 40px; font-family: 'Abhaya Libre', serif; font-weight: 800; line-height: 48px;">Memora</div>
+        </div>
+
+        <a href="index.html" style="text-decoration: none; min-height: 48px; padding: 0 24px; background: #F7F5F0; box-shadow: 0px 1px 2px -1px rgba(0, 0, 0, 0.10), 0px 1px 3px rgba(0, 0, 0, 0.10); border-radius: 9999px; justify-content: center; align-items: center; display: flex; color: #26302B; font-size: 16px; font-family: 'Inter', sans-serif; font-weight: 600;">
+          ← Back to Home
+        </a>
+      </div>
+    </div>
+
+    <!-- Two-Column Login Layout (Welcome Panel + White Login Card) -->
+    <div style="align-self: stretch; flex-direction: column; justify-content: flex-start; align-items: center; display: flex;">
+      <div style="width: 1120px; padding-top: 48px; padding-bottom: 48px; display: flex; gap: 36px; align-items: stretch; justify-content: space-between;">
+        
+        <!-- Left Soft-Green Welcome Card -->
+         <div style="flex: 1; padding: 48px; background: #DCE9DF; border-radius: 32px; flex-direction: column; justify-content: space-between; align-items: flex-start; display: flex; box-sizing: border-box;">
+          <div>
+            <div style="color: #44695C; font-size: 14px; font-family: 'Inter', sans-serif; font-weight: 600; line-height: 20px; letter-spacing: 1.68px;">WELCOME BACK</div>
+            <div style="padding-top: 16px; color: #26302B; font-size: 60px; font-family: 'Abhaya Libre', serif; font-weight: 800; line-height: 60px;">Log in to Memora</div>
+            <div style="padding-top: 20px; color: #4D5E55; font-size: 20px; font-family: 'Inter', sans-serif; font-weight: 400; line-height: 32.5px;">Sign in to unlock daily check-ins and your memory gallery.</div>
+          </div>
+
+          <div style="align-self: stretch; margin-top: 32px; padding: 20px; background: rgba(255, 255, 255, 0.65); border-radius: 16px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex;">
+            <div style="color: #26302B; font-size: 16px; font-family: 'Inter', sans-serif; font-weight: 700; line-height: 26px;">Supabase Connected</div>
+            <div style="color: #44534B; font-size: 16px; font-family: 'Inter', sans-serif; font-weight: 400; line-height: 26px;">Enter your email and password to sign in, or click <strong>Create an account</strong> below to register a new account.</div>
+          </div>
+        </div>
+
+        <!-- Right White Login Form Card -->
+        <div style="flex: 1; padding: 40px; background: white; box-shadow: 0px 18px 50px rgba(52, 68, 58, 0.09); border-radius: 32px; outline: 1px #DFE5DE solid; outline-offset: -1px; flex-direction: column; justify-content: space-between; align-items: stretch; display: flex; box-sizing: border-box;">
+          
+          <form id="auth-form" style="display: flex; flex-direction: column; width: 100%;">
+            
+            <!-- Email Field -->
+            <label for="email" style="color: #26302B; font-size: 18px; font-family: 'Inter', sans-serif; font-weight: 600; line-height: 28px; margin-bottom: 8px;">Email address</label>
+            <input 
+              type="email" 
+              id="email" 
+              placeholder="you@example.com" 
+              required 
+              style="width: 100%; height: 56px; padding: 0 16px; background: white; border-radius: 12px; border: 1px solid #AEBBB3; font-size: 16px; font-family: 'Inter', sans-serif; color: #26302B; box-sizing: border-box;" 
+            />
+
+            <!-- Password Field -->
+            <label for="password" style="color: #26302B; font-size: 18px; font-family: 'Inter', sans-serif; font-weight: 600; line-height: 28px; margin-top: 20px; margin-bottom: 8px;">Password</label>
+            <input 
+              type="password" 
+              id="password" 
+              placeholder="Enter your password" 
+              required 
+              style="width: 100%; height: 56px; padding: 0 16px; background: white; border-radius: 12px; border: 1px solid #AEBBB3; font-size: 16px; font-family: 'Inter', sans-serif; color: #26302B; box-sizing: border-box;" 
+            />
+
+            <!-- Forgot Password Link -->
+            <div style="display: flex; justify-content: flex-end; padding: 16px 0 20px 0;">
+              <a href="#" style="color: #44695C; font-size: 16px; font-family: 'Inter', sans-serif; font-weight: 600; text-decoration: underline; line-height: 24px;">Forgot password?</a>
+            </div>
+
+            <!-- Log In Submit Button -->
+            <button 
+              type="submit" 
+              style="width: 100%; height: 64px; background: #44695C; border: none; box-shadow: 0px 2px 4px -2px rgba(0, 0, 0, 0.10), 0px 4px 6px -1px rgba(0, 0, 0, 0.10); border-radius: 9999px; color: white; font-size: 20px; font-family: 'Inter', sans-serif; font-weight: 700; cursor: pointer;"
+            >
+              Log In
+            </button>
+
+            <!-- Status / Error Message Area -->
+            <p id="message" style="margin-top: 16px; text-align: center; font-family: 'Inter', sans-serif; font-size: 15px; font-weight: 500; color: #355F50; min-height: 22px;"></p>
+
+          </form>
+
+          <!-- Create an Account Trigger (#signup-btn) -->
+          <div style="padding-top: 12px; text-align: center; font-family: 'Inter', sans-serif; font-size: 18px; line-height: 28px;">
+            <span style="color: #59675F; font-weight: 400;">New to Memora? </span>
+            <button 
+              type="button" 
+              id="signup-btn" 
+              style="background: none; border: none; padding: 0; color: #355F50; font-size: 18px; font-family: 'Inter', sans-serif; font-weight: 700; text-decoration: underline; cursor: pointer;"
+            >
+              Create an account
+            </button>
+          </div>
+           </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Supabase & Auth Scripts -->
+  <script src="supabase.js"></script>
   <script>
-    const SUPABASE_URL = 'https://wmdtjluxbobbpriiuctv.supabase.co';
+    const SUPABASE_URL = 'https://' + 'wmdtjluxbobbpriiuctv.supabase.co';
     const SUPABASE_PUBLISHABLE_KEY = 'sb_publishable_bO577SIYEYbfl5FRXAfLvA_e2Bvu7wd';
 
     window.supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY);
