@@ -1,0 +1,75 @@
+/* shared.css — one nav bar + one font setup for every Memora page.
+   Link it AFTER styles.css:  <link rel="stylesheet" href="shared.css" />  */
+
+/* ---------- Fonts ---------- */
+/* Small writing = Inter (sans-serif). Headings use 'Abhaya Libre' (serif) where set inline. */
+body {
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Arial, sans-serif;
+}
+/* Buttons and form fields don't inherit the page font by default — make them match */
+button, input, select, textarea {
+  font-family: inherit;
+}
+
+/* ---------- Navigation bar ---------- */
+.site-nav {
+  box-sizing: border-box;
+  width: 100%;
+  height: 96px;
+  padding: 0 53px;
+  background: #609181;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 10;
+}
+
+/* Use "bleed" when the bar sits inside a centered, fixed-width wrapper (login + memories pages) */
+.site-nav.bleed {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+}
+
+.site-brand {
+  font-family: 'Abhaya Libre', Georgia, serif;
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 48px;
+  color: #F7F5F0;
+  text-decoration: none;
+}
+
+.site-nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.site-nav-btn {
+  box-sizing: border-box;
+  height: 48px;
+  padding: 0 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #F7F5F0;
+  color: #26302B;
+  border: none;
+  border-radius: 9999px;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  box-shadow: 0 1px 2px -1px rgba(0, 0, 0, 0.10), 0 1px 3px rgba(0, 0, 0, 0.10);
+}
+.site-nav-btn:hover { background: #fff; }
+
+@media (max-width: 700px) {
+  .site-nav { padding: 0 20px; }
+  .site-brand { font-size: 32px; }
+  .site-nav-btn { padding: 0 16px; font-size: 15px; }
+}

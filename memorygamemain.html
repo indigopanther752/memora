@@ -5,22 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Memora — Your Memories</title>
   <link rel="stylesheet" href="styles.css" />
-  <link href="https://googleapis.com" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="shared.css" />
 </head>
-<body style="margin: 0; background: #F7F5F0; display: flex; justify-content: center;">
+<body style="margin: 0; background: #F7F5F0; display: flex; justify-content: center; overflow-x: hidden;">
 
   <div style="width: 1268px; min-height: 2020px; background: #F7F5F0; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex;">
 
-    <!-- Top Green Header Bar -->
-    <div style="align-self: stretch; padding-top: 40px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex;">
-      <div style="align-self: stretch; height: 96px; padding-left: 53px; padding-right: 53px; background: #609181; justify-content: space-between; align-items: center; display: flex;">
-        <div style="color: #F7F5F0; font-size: 40px; font-family: 'Abhaya Libre', serif; font-weight: 800; line-height: 48px;">Memora</div>
-        
-        <a href="index.html" style="text-decoration: none; width: 176px; min-height: 48px; padding: 0 20px; background: #F7F5F0; box-shadow: 0px 1px 2px -1px rgba(0, 0, 0, 0.10), 0px 1px 3px rgba(0, 0, 0, 0.10); border-radius: 9999px; justify-content: center; align-items: center; display: flex; color: #26302B; font-size: 20px; font-family: 'Inter', sans-serif; font-weight: 500; cursor: pointer;">
-          ← Home
-        </a>
+    <!-- Navigation Bar (same on every page) -->
+    <header class="site-nav bleed">
+      <a class="site-brand" href="index.html">Memora</a>
+      <div class="site-nav-actions">
+        <a class="site-nav-btn" href="index.html">← Home</a>
+        <button id="logout-btn" type="button" class="site-nav-btn">Log Out</button>
       </div>
-    </div>
+    </header>
 
     <!-- Main Page Container -->
     <div style="align-self: stretch; flex-direction: column; justify-content: flex-start; align-items: center; display: flex;">

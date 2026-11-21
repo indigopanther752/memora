@@ -5,26 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Memora — Log In</title>
   <link rel="stylesheet" href="styles.css" />
-  <link href="https://googleapis.com" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="shared.css" />
 </head>
-<body style="margin: 0; background: #F7F5F0; display: flex; justify-content: center;">
+<body style="margin: 0; background: #F7F5F0; display: flex; justify-content: center; overflow-x: hidden;">
 
   <div style="width: 1268px; min-height: 100vh; background: #F7F5F0; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex;">
 
-    <!-- Top Green Header Bar -->
-    <div style="align-self: stretch; padding-top: 40px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex;">
-      <div style="align-self: stretch; height: 96px; padding-left: 53px; padding-right: 53px; background: #609181; border-radius: 20px; justify-content: space-between; align-items: center; display: flex;">
-        <div style="justify-content: flex-start; align-items: center; gap: 12px; display: flex;">
-          <!-- Optional Logo Slot (Uncomment and update filename if you want your logo here) -->
-          <!-- <img src="assets/logo.svg" alt="Memora Logo" style="height: 60px; width: auto;" /> -->
-          <div style="color: #F7F5F0; font-size: 40px; font-family: 'Abhaya Libre', serif; font-weight: 800; line-height: 48px;">Memora</div>
-        </div>
-
-        <a href="index.html" style="text-decoration: none; min-height: 48px; padding: 0 24px; background: #F7F5F0; box-shadow: 0px 1px 2px -1px rgba(0, 0, 0, 0.10), 0px 1px 3px rgba(0, 0, 0, 0.10); border-radius: 9999px; justify-content: center; align-items: center; display: flex; color: #26302B; font-size: 16px; font-family: 'Inter', sans-serif; font-weight: 600;">
-          ← Back to Home
-        </a>
+    <!-- Navigation Bar (same on every page) -->
+    <header class="site-nav bleed">
+      <a class="site-brand" href="index.html">Memora</a>
+      <div class="site-nav-actions">
       </div>
-    </div>
+    </header>
 
     <!-- Two-Column Login Layout (Welcome Panel + White Login Card) -->
     <div style="align-self: stretch; flex-direction: column; justify-content: flex-start; align-items: center; display: flex;">
