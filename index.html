@@ -10,116 +10,146 @@
   <link href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="shared.css" />
 </head>
-<body style="margin: 0; background: #F7F5F0; overflow-x: hidden;">
-
-  <!-- Navigation Bar (same on every page) -->
-  <header class="site-nav">
-    <a class="site-brand" href="index.html">Memora</a>
-    <div class="site-nav-actions">
-      <a class="site-nav-btn" href="progress.html">Progress</a>
-      <button id="logout-btn" type="button" class="site-nav-btn">Log Out</button>
-    </div>
-  </header>
-
-  <div style="width: 1268px; height: 2020px; position: relative; background: #F7F5F0; overflow: visible; margin: -96px auto 0;">
+<body style="margin: 0; background: #F7F5F0; display: flex; justify-content: center;">
+   <div style="width: 1268px; min-height: 100vh; background: #F7F5F0; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex;">
     
-
-    
-    
-    
-    <!-- Welcome Heading -->
-    <div style="width: 436px; height: 65px; left: 53px; top: 189px; position: absolute; color: #26302B; font-size: 60px; font-family: 'Abhaya Libre', serif; font-weight: 800; word-wrap: break-word">Welcome!</div>
-    <div style="width: auto; height: 45px; white-space: nowrap; left: 53px; top: 645px; position: absolute; color: #26302B; font-size: 30px; font-family: 'Inter', sans-serif; font-weight: 500; word-wrap: break-word">What would you like to do today?</div>
-
-    <!-- Card 1 (Top Left) -->
-    <div style="width: 564px; height: 430px; left: 51px; top: 697px; position: absolute">
-      <div style="width: 564px; height: 430px; left: 0px; top: 0px; position: absolute; background-color: rgba(197.40, 158.68, 96.39, 0.60); border-radius: 20px"></div>
-      <div style="width: auto; height: 34px; white-space: nowrap; left: 30px; top: 280px; position: absolute; color: black; font-size: 27px; font-family: 'Inter', sans-serif; font-weight: 700; word-wrap: break-word">Memory game</div>
-      <div style="width: auto; height: 25px; white-space: nowrap; left: 30px; top: 318px; position: absolute; color: #26302B; font-size: 18px; font-family: 'Inter', sans-serif; font-weight: 400; word-wrap: break-word">Revisit your favorite memories</div>
-      <img style="width: 512px; height: 235px; left: 26px; top: 27px; position: absolute; border-radius: 12px;" src="assets/memory-card-texture.png" />
-      <div style="width: 508px; height: 53px; left: 30px; top: 355px; position: absolute; background: #C59F60; box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.25); border-radius: 100px; border: 1px rgba(197.40, 158.68, 96.39, 0.60) solid"></div>
-      <div style="left: 206px; top: 366px; position: absolute; text-align: center; justify-content: center; display: flex; flex-direction: column; color: #1A1A1A; font-size: 25px; font-family: 'Inter', sans-serif; font-weight: 500; word-wrap: break-word">Get Started →</div>
-    </div>
-
-    <!-- Card 2 (Top Right) -->
-    <div style="width: 564px; height: 430px; left: 652px; top: 697px; position: absolute">
-      <div style="width: 564px; height: 430px; left: 0px; top: 0px; position: absolute; background: rgba(96, 145, 129, 0.61); border-radius: 20px"></div>
-      <div style="width: auto; height: 34px; white-space: nowrap; left: 30px; top: 280px; position: absolute; color: black; font-size: 27px; font-family: 'Inter', sans-serif; font-weight: 700; word-wrap: break-word">Memory game</div>
-      <div style="width: auto; height: 25px; white-space: nowrap; left: 30px; top: 318px; position: absolute; color: #26302B; font-size: 18px; font-family: 'Inter', sans-serif; font-weight: 400; word-wrap: break-word">Revisit your favorite memories</div>
-      <img style="width: 512px; height: 235px; left: 26px; top: 27px; position: absolute; border-radius: 12px;" src="assets/memory-card-texture.png" />
-      <div style="width: 508px; height: 53px; left: 30px; top: 355px; position: absolute; background: #5E907F; box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.25); border-radius: 100px; border: 1px rgba(96, 145, 129, 0.61) solid"></div>
-      <div style="left: 206px; top: 366px; position: absolute; text-align: center; justify-content: center; display: flex; flex-direction: column; color: #1A1A1A; font-size: 25px; font-family: 'Inter', sans-serif; font-weight: 500; word-wrap: break-word">Get Started →</div>
-    </div>
-
-     <!-- Card 3 (Bottom Left) -->
-    <div style="width: 564px; height: 430px; left: 51px; top: 1166px; position: absolute">
-      <div style="width: 564px; height: 430px; left: 0px; top: 0px; position: absolute; background: rgba(197.40, 158.68, 96.39, 0.60); border-radius: 20px"></div>
-      <div style="width: auto; height: 34px; white-space: nowrap; left: 30px; top: 280px; position: absolute; color: black; font-size: 27px; font-family: 'Inter', sans-serif; font-weight: 700; word-wrap: break-word">Memory game</div>
-      <div style="width: auto; height: 25px; white-space: nowrap; left: 30px; top: 318px; position: absolute; color: #26302B; font-size: 18px; font-family: 'Inter', sans-serif; font-weight: 400; word-wrap: break-word">Revisit your favorite memories</div>
-      <img style="width: 512px; height: 235px; left: 26px; top: 27px; position: absolute; border-radius: 12px;" src="assets/memory-card-texture.png" />
-      <div style="width: 508px; height: 53px; left: 30px; top: 355px; position: absolute; background: #C59F60; box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.25); border-radius: 100px; border: 1px rgba(197.40, 158.68, 96.39, 0.60) solid"></div>
-      <div style="left: 206px; top: 366px; position: absolute; text-align: center; justify-content: center; display: flex; flex-direction: column; color: #1A1A1A; font-size: 25px; font-family: 'Inter', sans-serif; font-weight: 500; word-wrap: break-word">Get Started →</div>
-    </div>
-
-    <!-- Card 4 (Bottom Right) -->
-    <div style="width: 564px; height: 430px; left: 652px; top: 1166px; position: absolute">
-      <div style="width: 564px; height: 430px; left: 0px; top: 0px; position: absolute; background: rgba(96, 145, 129, 0.61); border-radius: 20px"></div>
-      <div style="width: auto; height: 34px; white-space: nowrap; left: 30px; top: 280px; position: absolute; color: black; font-size: 27px; font-family: 'Inter', sans-serif; font-weight: 700; word-wrap: break-word">Memory game</div>
-      <div style="width: auto; height: 25px; white-space: nowrap; left: 30px; top: 318px; position: absolute; color: #26302B; font-size: 18px; font-family: 'Inter', sans-serif; font-weight: 400; word-wrap: break-word">Revisit your favorite memories</div>
-      <img style="width: 512px; height: 235px; left: 26px; top: 27px; position: absolute; border-radius: 12px;" src="assets/memory-card-texture.png" />
-      <div style="width: 508px; height: 53px; left: 30px; top: 355px; position: absolute; background: #5E907F; box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.25); border-radius: 100px; border: 1px rgba(96, 145, 129, 0.61) solid"></div>
-      <div style="left: 206px; top: 366px; position: absolute; text-align: center; justify-content: center; display: flex; flex-direction: column; color: #1A1A1A; font-size: 25px; font-family: 'Inter', sans-serif; font-weight: 500; word-wrap: break-word">Get Started →</div>
-    </div>
-
-    <!-- Calendar Reminder Card -->
-    <div style="width: 654px; height: 301px; left: 62px; top: 1651px; position: absolute; background: rgba(89.42, 169.84, 174.07, 0.54); border-radius: 20px"></div>
-    
-    <!-- Calendar Icon (Update src="calendar.svg" if your file has a different name) -->
-    <img src="assets/calendar-check.svg" alt="Calendar" style="height: 36px; width: auto; left: 97px; top: 1680px; position: absolute;" />
-    
-    <!-- Reminder Heading Beside the Calendar Icon -->
-    <div style="left: 145px; top: 1684px; position: absolute; color: #26302B; font-size: 24px; font-family: 'Inter', sans-serif; font-weight: 700;">You have two reminders today</div>
-    
-    <div style="width: auto; height: 25px; white-space: nowrap; left: 97px; top: 1742px; position: absolute; color: #26302B; font-size: 18px; font-family: 'Inter', sans-serif; font-weight: 400; word-wrap: break-word">Medication at 10 AM</div>
-    <div style="width: auto; height: 25px; white-space: nowrap; left: 97px; top: 1777px; position: absolute; color: #26302B; font-size: 18px; font-family: 'Inter', sans-serif; font-weight: 400; word-wrap: break-word">Doctor's appointment at 2 PM</div>
-    <div style="width: 582px; height: 53px; left: 97px; top: 1870px; position: absolute; background: #C59F60; box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.25); border-radius: 100px; border: 1px rgba(197.40, 158.68, 96.39, 0.60) solid"></div>
-    <div style="left: 254px; top: 1882px; position: absolute; text-align: center; justify-content: center; display: flex; flex-direction: column; color: #1A1A1A; font-size: 25px; font-family: 'Inter', sans-serif; font-weight: 500; word-wrap: break-word">View my calendar →</div>
-
-    <!-- Daily Check-In Card -->
-    <div style="width: 600px; height: 400px; left: 636px; top: 170px; position: absolute; background: white; overflow: hidden; border-radius: 24px; outline: 1px #DFE5DE solid; outline-offset: -1px">
-      <div style="width: 544px; height: 100px; left: 28px; top: 26px; position: absolute; overflow: hidden">
-        <div style="left: 0px; top: 0px; position: absolute; color: #44695C; font-size: 12px; font-family: 'Inter', sans-serif; font-weight: 500; word-wrap: break-word">DAILY CHECK-IN</div>
-        <div style="width: 544px; left: 0px; top: 23px; position: absolute; color: #26302B; font-size: 32px; font-family: 'Abhaya Libre', serif; font-weight: 800; word-wrap: break-word">How are you feeling?</div>
-        <div style="width: 544px; left: 0px; top: 66px; position: absolute; color: #59675F; font-size: 15px; font-family: 'Inter', sans-serif; font-weight: 400; word-wrap: break-word">Select a mood to check in for today</div>
+    <!-- Top Green Header Bar (Progress + Log Out in the Corner) -->
+    <div style="align-self: stretch; padding-top: 40px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex;">
+      <div style="align-self: stretch; height: 96px; padding-left: 53px; padding-right: 53px; background: #609181; border-radius: 20px; justify-content: space-between; align-items: center; display: flex;">
+        <div style="color: #F7F5F0; font-size: 40px; font-family: 'Abhaya Libre', serif; font-weight: 800; line-height: 48px;">Memora</div>
+        
+        <div style="display: flex; align-items: center; gap: 16px;">
+          <a href="#progress" style="text-decoration: none; min-width: 140px; min-height: 48px; padding: 0 24px; background: #F7F5F0; box-shadow: 0px 1px 2px -1px rgba(0, 0, 0, 0.10), 0px 1px 3px rgba(0, 0, 0, 0.10); border-radius: 9999px; justify-content: center; align-items: center; display: flex; color: #26302B; font-size: 18px; font-family: 'Inter', sans-serif; font-weight: 500; cursor: pointer;">
+            Progress
+          </a>
+          <button id="logout-btn" type="button" style="min-height: 48px; padding: 0 24px; background: #26302B; border: none; box-shadow: 0px 1px 2px -1px rgba(0, 0, 0, 0.10), 0px 1px 3px rgba(0, 0, 0, 0.10); border-radius: 9999px; justify-content: center; align-items: center; display: flex; color: #F7F5F0; font-size: 18px; font-family: 'Inter', sans-serif; font-weight: 600; cursor: pointer;">
+            Log Out
+          </button>
+        </div>
       </div>
-    
-    <div style="left: 28px; top: 155px; position: absolute; display: flex; gap: 16px; align-items: center;">
-        <button type="button" class="mood-btn" data-mood="awful" style="background: none; border: none; cursor: pointer; padding: 0;">
-            <img src="assets/mood-awful.svg" alt="awful" />
-        </button>
-        <button type="button" class="mood-btn" data-mood="good" style="background: none; border: none; cursor: pointer; padding: 0;">
-            <img src="assets/mood-good.svg" alt="good" />
-        </button>
-        <button type="button" class="mood-btn" data-mood="great" style="background: none; border: none; cursor: pointer; padding: 0;">
-            <img src="assets/mood-great.svg" alt="great" />
-        </button>
-        <button type="button" class="mood-btn" data-mood="low" style="background: none; border: none; cursor: pointer; padding: 0;">
-            <img src="assets/mood-low.svg" alt="low" />
-        </button>
-        <button type="button" class="mood-btn" data-mood="okay" style="background: none; border: none; cursor: pointer; padding: 0;">
-            <img src="assets/mood-okay.svg" alt="okay" />
-        </button>
     </div>
-    <div style="width: 544px; height: 92px; left: 28px; top: 280px; position: absolute; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
-      <img src="assets/mood-banner.svg" alt="" style="width: 100%; height: 100%; position: absolute; top: 0; left: 0; z-index: 0;" />
-    <div id="mood-status-title" style="position: relative; z-index: 1; color: #26302B; font-size: 16px; font-family: 'Inter', sans-serif; font-weight: 600;">
-    Choose a mood to update today.
-    </div>
-    <div id="mood-status-sub" style="position: relative; z-index: 1; color: #59675F; font-size: 13px; font-family: 'Inter', sans-serif; font-weight: 400; margin-top: 4px;">
-    Your latest choice appears in your mood calendar.
-    </div>
-    </div>
+
+    <!-- Main Container -->
+    <div style="align-self: stretch; flex-direction: column; justify-content: flex-start; align-items: center; display: flex;">
+      <div style="width: 1162px; padding-bottom: 96px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex;">
+        
+        <!-- 1. Welcome Card + Daily Check-In Card (Side by Side) -->
+        <div style="align-self: stretch; padding-top: 64px; display: flex; gap: 28px; align-items: stretch;">
+          
+          <!-- Left Card: Welcome to Memora! -->
+          <div style="flex: 1; min-height: 400px; padding: 40px; position: relative; background: #DCE9DF; box-shadow: 0px 18px 50px rgba(52, 68, 58, 0.06); overflow: hidden; border-radius: 24px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex; box-sizing: border-box;">
+            <div style="color: #44695C; font-size: 14px; font-family: 'Inter', sans-serif; font-weight: 600; line-height: 20px; letter-spacing: 1.68px; position: relative; z-index: 1;">A GENTLE SPACE</div>
+            <div style="max-width: 466px; padding-top: 16px; color: #26302B; font-size: 60px; font-family: 'Abhaya Libre', serif; font-weight: 800; line-height: 61.2px; position: relative; z-index: 1;">Welcome to Memora!</div>
+            <div style="max-width: 448px; padding-top: 20px; color: #42524A; font-size: 20px; font-family: 'Inter', sans-serif; font-weight: 400; line-height: 32.5px; position: relative; z-index: 1;">Keep important moments close, check in with how you feel, and take each day one simple step at a time.</div>
+            
+            <!-- Decorative Circles -->
+              <div style="width: 208px; height: 208px; right: -30px; bottom: -40px; position: absolute; background: rgba(197, 159, 96, 0.25); border-radius: 9999px;"></div>
+            <div style="width: 80px; height: 80px; right: 110px; bottom: 50px; position: absolute; background: rgba(255, 255, 255, 0.55); border-radius: 9999px;"></div>
+          </div>
+
+          <!-- Right Card: Daily Check-In With All 5 Mood Faces -->
+          <div style="flex: 1; min-height: 400px; padding: 28px; background: white; box-shadow: 0px 18px 50px rgba(52, 68, 58, 0.06); border-radius: 24px; outline: 0.67px #DFE5DE solid; outline-offset: -0.67px; flex-direction: column; justify-content: space-between; align-items: flex-start; display: flex; box-sizing: border-box;">
+            <div>
+              <div style="color: #44695C; font-size: 12px; font-family: 'Inter', sans-serif; font-weight: 500; line-height: 16px; letter-spacing: 0.96px;">DAILY CHECK-IN</div>
+              <div style="padding-top: 4px; color: #26302B; font-size: 30px; font-family: 'Abhaya Libre', serif; font-weight: 800; line-height: 36px;">How are you feeling?</div>
+              <div style="padding-top: 4px; color: #59675F; font-size: 16px; font-family: 'Inter', sans-serif; font-weight: 400; line-height: 24px;">Choose the face that feels most like you right now.</div>
+            </div>
+
+            <!-- 5 Interactive Mood Face Buttons -->
+              <div style="width: 100%; display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; margin: 20px 0;">
   
+            <!-- 1. AWFUL -->
+              <button type="button" class="mood-btn" data-mood="awful" data-neutral="assets/YOUR-AWFUL-NEUTRAL.svg" data-color="assets/YOUR-AWFUL-COLOR.svg" style="background: none; border: 1px solid transparent; border-radius: 16px; padding: 12px 4px; cursor: pointer; display: flex; flex-direction: column; align-items: center; gap: 8px;">
+              <img src="assets/mood-awful.svg" alt="Awful" style="width: 48px; height: 48px;" />
+              <span style="font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 500; color: #59675F;">Awful</span>
+              </button>
+
+            <!-- 2. LOW -->
+              <button type="button" class="mood-btn" data-mood="low" data-neutral="assets/YOUR-LOW-NEUTRAL.svg" data-color="assets/YOUR-LOW-COLOR.svg" style="background: none; border: 1px solid transparent; border-radius: 16px; padding: 12px 4px; cursor: pointer; display: flex; flex-direction: column; align-items: center; gap: 8px;">
+              <img src="assets/mood-low.svg" alt="Low" style="width: 48px; height: 48px;" />
+              <span style="font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 500; color: #59675F;">Low</span>
+              </button>
+
+            <!-- 3. OKAY -->
+              <button type="button" class="mood-btn" data-mood="okay" data-neutral="assets/YOUR-OKAY-NEUTRAL.svg" data-color="assets/YOUR-OKAY-COLOR.svg" style="background: none; border: 1px solid transparent; border-radius: 16px; padding: 12px 4px; cursor: pointer; display: flex; flex-direction: column; align-items: center; gap: 8px;">
+              <img src="assets/mood-okay.svg" alt="Okay" style="width: 48px; height: 48px;" />
+              <span style="font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 500; color: #59675F;">Okay</span>
+              </button>
+
+            <!-- 4. GOOD -->
+              <button type="button" class="mood-btn" data-mood="good" data-neutral="assets/YOUR-GOOD-NEUTRAL.svg" data-color="assets/YOUR-GOOD-COLOR.svg" style="background: none; border: 1px solid transparent; border-radius: 16px; padding: 12px 4px; cursor: pointer; display: flex; flex-direction: column; align-items: center; gap: 8px;">
+              <img src="assets/mood-good.svg" alt="Good" style="width: 48px; height: 48px;" />
+              <span style="font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 500; color: #59675F;">Good</span>
+              </button>
+
+            <!-- 5. GREAT -->
+              <button type="button" class="mood-btn" data-mood="great" data-neutral="assets/YOUR-GREAT-NEUTRAL.svg" data-color="assets/YOUR-GREAT-COLOR.svg" style="background: none; border: 1px solid transparent; border-radius: 16px; padding: 12px 4px; cursor: pointer; display: flex; flex-direction: column; align-items: center; gap: 8px;">
+              <img src="assets/mood-great.svg" alt="Great" style="width: 48px; height: 48px;" />
+              <span style="font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 500; color: #59675F;">Great</span>
+              </button>
+
+            </div>
+
+            <!-- Status Banner Box -->
+            <div style="align-self: stretch; min-height: 80px; padding: 12px 16px; background: #EBEFE8; border-radius: 16px; flex-direction: column; justify-content: center; align-items: center; gap: 4px; display: flex;">
+              <div id="mood-status-text" style="text-align: center; color: #26302B; font-size: 16px; font-family: 'Inter', sans-serif; font-weight: 500; line-height: 24px;">Choose a mood for November 20.</div>
+              <div style="text-align: center; color: #59675F; font-size: 14px; font-family: 'Inter', sans-serif; font-weight: 400; line-height: 20px;">Your choice appears in your mood calendar.</div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- 2. Bottom Row: "What would you like to do today?" -->
+      <div style="padding-top: 52px; flex-direction: column; display: flex;">
+        <div style="color: #26302B; font-size: 28px; font-family: 'Inter', sans-serif; font-weight: 600; line-height: 34px;">What would you like to do today?</div>
+        
+        <div style="padding-top: 20px; display: flex; gap: 28px; align-items: stretch;">
+          
+          <!-- Left Wide Card: Horizontal Split Photo + Content -->
+          <div style="flex: 1.65; min-height: 380px; background: #DFC69A; box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.06); overflow: hidden; border-radius: 24px; display: flex; align-items: stretch;">
+            <div style="width: 52%; flex-shrink: 0;">
+              <img src="assets/memoryplay.svg" alt="Family looking at photo album" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
+            </div>
+
+            <div style="flex: 1; padding: 36px 32px; display: flex; flex-direction: column; justify-content: space-between; align-items: flex-start; box-sizing: border-box;">
+              <div>
+                <div style="color: #654F2C; font-size: 13px; font-family: 'Inter', sans-serif; font-weight: 600; letter-spacing: 1.6px;">MEMORY JOGGING</div>
+                <div style="padding-top: 10px; color: #26302B; font-size: 38px; font-family: 'Abhaya Libre', serif; font-weight: 800; line-height: 40px;">Your Memories</div>
+                <div style="padding-top: 14px; color: #493D2D; font-size: 17px; font-family: 'Inter', sans-serif; font-weight: 400; line-height: 26px;">Add photos and videos, then revisit the moments that matter most.</div>
+              </div>
+
+              <a href="memorygamemain.html" style="text-decoration: none; margin-top: 24px; padding: 14px 28px; background: #26302B; border-radius: 9999px; color: #F7F5F0; font-size: 17px; font-family: 'Inter', sans-serif; font-weight: 600; line-height: 22px; display: inline-flex; align-items: center; justify-content: center;">
+                Open Memory<br/>Jogging →
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Card: Today's Reminders With Calendar Icon Above Heading -->
+          <div style="flex: 1; min-height: 380px; padding: 36px 32px; background: #A9C8BD; box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.06); border-radius: 24px; display: flex; flex-direction: column; justify-content: space-between; box-sizing: border-box;">
+            <div>
+              <img src="assets/calendar-check.svg" alt="Calendar" style="width: 36px; height: 36px; display: block; margin-bottom: 12px;" />
+              <div style="color: #26302B; font-size: 34px; font-family: 'Abhaya Libre', serif; font-weight: 800; line-height: 38px;">Today's reminders</div>
+
+              <div id="reminders-list" style="margin-top: 24px; display: flex; flex-direction: column; gap: 14px;">
+                <div style="padding: 16px 20px; background: rgba(255, 255, 255, 0.55); border-radius: 14px; color: #26302B; font-size: 16px; font-family: 'Inter', sans-serif; font-weight: 500;">
+                  Medication at 10 AM
+                </div>
+                <div style="padding: 16px 20px; background: rgba(255, 255, 255, 0.55); border-radius: 14px; color: #26302B; font-size: 16px; font-family: 'Inter', sans-serif; font-weight: 500;">
+                  Doctor's appointment at 2 PM
+                </div>
+              </div>
+            </div>
+
+            <button id="open-reminders-btn" type="button" style="width: 100%; height: 52px; margin-top: 24px; padding: 0 24px; background: #C89F5D; border: none; border-radius: 9999px; color: #26302B; font-size: 17px; font-family: 'Inter', sans-serif; font-weight: 600; cursor: pointer; display: flex; align-items: center; justify-content: center;">
+              View my calendar →
+            </button>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
     <script src="supabase.js"></script>
   <script>
     const SUPABASE_URL = 'https://wmdtjluxbobbpriiuctv.supabase.co';
