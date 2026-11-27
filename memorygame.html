@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom Quiz Builder</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://googleapis.com" rel="stylesheet" />
+</head>
+<div style="align-self: stretch; padding-top: 40px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex;">
+      <div style="align-self: stretch; height: 96px; padding-left: 53px; padding-right: 53px; background: #609181; justify-content: space-between; align-items: center; display: flex;">
+        <div style="color: #F7F5F0; font-size: 40px; font-family: 'Abhaya Libre', serif; font-weight: 800; line-height: 48px;">Memora</div>
+        
+        <a href="index.html" style="text-decoration: none; width: 176px; min-height: 48px; padding: 0 20px; background: #F7F5F0; box-shadow: 0px 1px 2px -1px rgba(0, 0, 0, 0.10), 0px 1px 3px rgba(0, 0, 0, 0.10); border-radius: 9999px; justify-content: center; align-items: center; display: flex; color: #26302B; font-size: 20px; font-family: 'Inter', sans-serif; font-weight: 500; cursor: pointer;">
+          ← Home
+        </a>
+      </div>
+    </div>
+  <style>
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: #f9fafb;
+      color: #111827;
+    }
+    .card {
+      background: rgb(99, 95, 95);
+      padding: 24px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+      font-family: 'Inter', sans-serif;
+    }
+    h2 { margin-top: 0; }
+    label {
+      display: block;
+      font-weight: 600;
+      margin-top: 12px;
+      margin-bottom: 4px;
+    }
+    input[type="text"] {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #d1d5db;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    button {
+      margin-top: 16px;
+      padding: 10px 16px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: 600;
+      background-color: #2563eb;
+      color: white;
+    }
+    button:hover { background-color: #1d4ed8; }
+    button.secondary { background-color: #059669; }
+    button.secondary:hover { background-color: #047857; }
+    .hidden { display: none; }
+    .question-item {
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .result {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-top: 16px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Step 1: User Input Section -->
+  <div id="builder-section" class="card">
+    <h2>1. Create Your Quiz! </h2>
+    <p>Questions added: <strong id="question-count">0</strong></p>
+
+    <label for="question-input">Question:</label>
+    <input type="text" id="question-input" placeholder="e.g., Where was this photo taken?">
+
+    <label for="answer-input">Correct Answer:</label>
+    <input type="text" id="answer-input" placeholder="e.g., Paris">
+
+    <button type="button" onclick="addQuestion()">+ Add Question</button>
+    <button type="button" class="secondary" onclick="startQuiz()">Start Quiz</button>
+  </div>
+
+  <!-- Step 2: Take Quiz Section -->
+  <div id="quiz-section" class="card hidden">
+    <h2>2. Take the Quiz</h2>
+    <div id="quiz-container"></div>
+    <button type="button" onclick="submitQuiz()">Submit Answers</button>
+    <div id="score-display" class="result"></div>
+    <button type="button" class="secondary hidden" id="reset-btn" onclick="resetApp()">Create Another Quiz</button>
+  </div>
+
+  <script>
+    const quizData = [];
+
+    function addQuestion() {
+      const qInput = document.getElementById('question-input');
+      const aInput = document.getElementById('answer-input');
+      const question = qInput.value.trim();
+      const answer = aInput.value.trim();
+
+      if (!question || !answer) {
+        alert("Please enter both a question and an answer.");
+        return;
+      }
+
+      quizData.push({ question, answer });
+      document.getElementById('question-count').textContent = quizData.length;
+
+      // Clear inputs for next question
+      qInput.value = '';
+      aInput.value = '';
+      qInput.focus();
+    }
+
+    function startQuiz() {
+      if (quizData.length === 0) {
+        alert("Please add at least one question first.");
+        return;
+      }
+
+      document.getElementById('builder-section').classList.add('hidden');
+      document.getElementById('quiz-section').classList.remove('hidden');
+
+      const container = document.getElementById('quiz-container');
+      container.innerHTML = '';
+
+      quizData.forEach((item, index) => {
+        const div = document.createElement('div');
+        div.className = 'question-item';
+        div.innerHTML = `
+          <label for="user-ans-${index}">${index + 1}. ${item.question}</label>
+          <input type="text" id="user-ans-${index}" placeholder="Your answer...">
+        `;
+        container.appendChild(div);
+      });
+    }
+
+    function submitQuiz() {
+      let score = 0;
+
+      quizData.forEach((item, index) => {
+        const userInput = document.getElementById(`user-ans-${index}`);
+        const userAnswer = userInput.value.trim().toLowerCase();
+        const correctAnswer = item.answer.toLowerCase();
+
+        if (userAnswer === correctAnswer) {
+          score++;
+          userInput.style.borderColor = '#059669';
+          userInput.style.backgroundColor = '#ecfdf5';
+        } else {
+          userInput.style.borderColor = '#dc2626';
+          userInput.style.backgroundColor = '#fef2f2';
+        }
+      });
+
+      document.getElementById('score-display').textContent = 
+        `You scored ${score} out of ${quizData.length}!`;
+      document.getElementById('reset-btn').classList.remove('hidden');
+    }
+
+    function resetApp() {
+      quizData.length = 0;
+      document.getElementById('question-count').textContent = '0';
+      document.getElementById('score-display').textContent = '';
+      document.getElementById('reset-btn').classList.add('hidden');
+      document.getElementById('quiz-section').classList.add('hidden');
+      document.getElementById('builder-section').classList.remove('hidden');
+    }
+  </script>
+
+</body>
+</html>
+
