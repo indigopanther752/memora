@@ -35,7 +35,6 @@ supabaseClient.auth.onAuthStateChange((event, session) => {
     window.location.href = 'login.html';
   }
 });
-
 const statusTitle = document.getElementById('mood-status-title');
 if (statusTitle) {
   const today = new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric' });
@@ -48,3 +47,11 @@ if (statusTitle) {
     });
   });
 }
+
+const today = new Date();
+const formattedDate = today.toLocaleDateString('en-US', {
+  month: 'long',
+  day: 'numeric'
+});
+
+document.getElementById('mood-status-text').textContent = `Choose a mood for ${formattedDate}.`;
